@@ -1,6 +1,6 @@
 [package]
 name = "zip-wasm"
-version = "1.0.0-pre.0"
+version = "1.0.0"
 edition = "2018"
 
 [lib]
