@@ -1,6 +1,6 @@
 {
   "name": "@hiogawa/zip.wasm",
-  "version": "1.0.0-pre.0",
+  "version": "1.0.0-pre.1",
   "type": "module",
   "main": "./pkg/index.js",
   "types": "./pkg/index.d.ts",
@@ -17,6 +17,7 @@
     "url": "https://github.com/hi-ogawa/zip",
     "directory": "wasm"
   },
+  "license": "MIT",
   "scripts": {
     "dev": "  npm run wasm-pack -- --dev && npm run fix-pkg",
     "build": "npm run wasm-pack          && npm run fix-pkg",
