@@ -6,8 +6,8 @@ pnpm i
 npm run dev
 
 # example
-node bin/zip-info.js ~/Downloads/sudachi-dictionary-20220729-small.zip
-node bin/zip-extract.js ~/Downloads/sudachi-dictionary-20220729-small.zip 3
+node bin/zip-info.js ../tests/data/files_and_dirs.zip
+node bin/zip-extract.js ../tests/data/files_and_dirs.zip 0
 
 # release
 npm run build
