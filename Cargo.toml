@@ -46,3 +46,9 @@ harness = false
 [[bench]]
 name = "read_metadata"
 harness = false
+
+[workspace]
+members = [
+    ".",
+    "wasm"
+]
