@@ -3,7 +3,25 @@ use serde_wasm_bindgen::Error;
 use std::io::Cursor;
 use wasm_bindgen::prelude::*;
 
-#[wasm_bindgen]
+#[wasm_bindgen(typescript_custom_section)]
+const DTS_EXTRA: &'static str = r#"
+
+export interface ZipMetadata {
+    entries: ZipEntry[];
+}
+
+export interface ZipEntry {
+    file_name: string;
+    uncompressed_size: number;
+    compressed_size: number;
+    compression_method: string;
+}
+
+export function read_metadata(data: Uint8Array): ZipMetadata;
+
+"#;
+
+#[wasm_bindgen(skip_typescript)]
 pub fn read_metadata(data: &[u8]) -> Result<JsValue, JsValue> {
     let mut archive = zip::ZipArchive::new(Cursor::new(data)).map_err(Error::new)?;
 
